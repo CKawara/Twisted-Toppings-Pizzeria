@@ -37,10 +37,14 @@ Order.prototype.cost = function(){
         return (sizePrice + crustPrice + toppingsPrice)* this.amount;
     }else{
         alert("You've selected more than 4 toppings!!");
-    }
-
-    
+    }  
 }
+
+Order.prototype.name =function(){
+    var pizzaName =`${this.amount} ${this.size} ${this.crust} ${'crusted pizza, with'} ${this.toppings} ${"for the topping."}`;
+    return pizzaName;
+}
+
 $("document").ready(function(){
 
     $("#make-pizza").submit (function(event){
@@ -53,8 +57,7 @@ $("document").ready(function(){
         });
         let amount = parseInt($('input#amount').val());
         let pizzaOrder = new Order(size, crust, toppings, amount);
-        let pizzaName =`${amount} ${size} ${crust} ${'crusted pizza, with'} ${toppings} ${"for the topping."}`;
-        $('.order span').text( `${pizzaName} ${"which will cost"} ${pizzaOrder.cost()}`)
+        $('.order span').text( `${pizzaOrder.name()} ${"which will cost"} ${pizzaOrder.cost()}`)
         $('.order').show();
     })
     $("#deliver").click(function(){
