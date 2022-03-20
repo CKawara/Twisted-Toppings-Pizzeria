@@ -12,6 +12,18 @@
 
 </head>
 <body>
+    <section id="home">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="twisted">Twisted Toppings <br> Pizzeria</div>
+                    <h1>We Knead Pizza</h1>
+                    <p>To be happy</p>
+                    <a class="btn" href="#make-pizza" role="button">Link</a>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="order">
         <div class="container">
             <div class="row">
@@ -90,17 +102,16 @@
                     </div>
                     <div class="delivery">
                         <p>Your delivery to <span></span> is being processed and will cost Ksh 200</p>
-                        <button type="button" >Checkout</button>
+                        <button class="checkout" type="button" >Checkout</button>
                     </div>
                     <div class="pick-up">
                         <p>Your Order will be ready in 45 minutes</p>
-                        <button type="button" >Checkout</button>
+                        <button class="checkout" type="button" >Checkout</button>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="summary">
                         <h3>Order Summary</h3>
-                        <p>You odered the <span></span></p>
                         <table class="table">
                             <thead>
                               <tr>
@@ -139,7 +150,7 @@
                               <tbody>
                                   <tr>
                                       <td id="p-deli"></td>
-                                      <td></td>
+                                      <td id="deli-cost"></td>
                                   </tr>
                               </tbody>
                           </table>

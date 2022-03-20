@@ -58,7 +58,7 @@ $("document").ready(function(){
         var amount = parseInt($('input#amount').val());
         var pizzaOrder = new Order(size, crust, toppings, amount);
         $('.order span').text( `${pizzaOrder.name()} ${"which will cost"} ${pizzaOrder.cost()}`)
-        $('.order').show();
+        $('.order').show(); 
     })
     $("#deliver").click(function(){
         $('.location').show();
@@ -67,13 +67,13 @@ $("document").ready(function(){
     $(".location button").click(function(event){
         event.preventDefault();
         var location = $('.location input').val();
-        $('.delivery span').text(location + size);
+        $('.delivery span').text(location);
         $('.location').hide();
         $('.delivery').show();
     })
     $("#instore").click(function(){
         $(".pick-up").show();
         $(".order").hide();
-    })
-
+    }) 
 })
+

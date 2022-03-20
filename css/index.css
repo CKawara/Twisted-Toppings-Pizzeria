@@ -1,3 +1,3 @@
-.order, .location, .delivery, .pick-up{
+.order, .location, .delivery, .pick-up, table{
     display: none;
 }
