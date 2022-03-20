@@ -41,7 +41,7 @@ Order.prototype.cost = function(){
 }
 
 Order.prototype.name =function(){
-    var pizzaName =`${this.amount} ${this.size} ${this.crust} ${'crusted pizza, with'} ${this.toppings} ${"for the topping."}`;
+    let pizzaName =`${this.amount} ${this.size} ${this.crust} ${'crusted pizza, with'} ${this.toppings} ${"for the topping."}`;
     return pizzaName;
 }
 
@@ -49,14 +49,14 @@ $("document").ready(function(){
 
     $("#make-pizza").submit (function(event){
         event.preventDefault();
-        let size = $('select#size').val();
-        let crust = $('select#crust').val(); 
-        let toppings = [];
+        var size = $('select#size').val();
+        var crust = $('select#crust').val(); 
+        var toppings = [];
         $.each($('input[name="toppings"]:checked'),function(){
             toppings.push($(this).val());
         });
-        let amount = parseInt($('input#amount').val());
-        let pizzaOrder = new Order(size, crust, toppings, amount);
+        var amount = parseInt($('input#amount').val());
+        var pizzaOrder = new Order(size, crust, toppings, amount);
         $('.order span').text( `${pizzaOrder.name()} ${"which will cost"} ${pizzaOrder.cost()}`)
         $('.order').show();
     })
@@ -67,7 +67,7 @@ $("document").ready(function(){
     $(".location button").click(function(event){
         event.preventDefault();
         var location = $('.location input').val();
-        $('.delivery span').text(location);
+        $('.delivery span').text(location + size);
         $('.location').hide();
         $('.delivery').show();
     })
@@ -75,4 +75,5 @@ $("document").ready(function(){
         $(".pick-up").show();
         $(".order").hide();
     })
+
 })
