@@ -97,3 +97,10 @@ h1{
     background-color: transparent;
     border: #FAF3F3 1px solid;
 }
+.form-select option {
+    background-color: #FAF3F3 !important;
+    color: #DD1C1C !important;
+  }
+  .form-check-input:checked{
+    background-color: #FAF3F3;
+  }
