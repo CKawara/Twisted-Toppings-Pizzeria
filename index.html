@@ -48,9 +48,9 @@
         </div>
     </section>
     <section id="our-pizza">
-        <div class="titles">OUR PIZZA</div>
+        <div class="titles">OUR PIZZA <br> <span>The Process</span></div>
         <div class="container-fluid">
-            <div class="row gx-5">
+            <div class="row">
                 <div class="col-lg-3 col-sm-6">
                     <img src="/assets/dough.jpg" height="230" width="280" alt="dough">
                     <div class="description">We prepare the dough,<br> with the crust flavour of your choice</div>
@@ -64,16 +64,18 @@
                     <div class="description">Add all the fun toppings <br> of your choice</div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
-                    <img src="/assets/bake.gif"height="230" width="280" alt="dough">
+                    <img src="/assets/bake.gif"height="230" width="260" alt="dough">
                     <div class="description">And In to the oven it goes. <br> look at that cheese melt!!</div>
                 </div>
             </div>
         </div>
     </section>
     <section id="order">
+        <div class="titles">PLACE ORDER</div>
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-lg-6">
+                   <div class="order-red">
                     <form id="make-pizza" action="">
                         <div class="form-group">
                             <label for="size">Select Pizza Size</label>
@@ -133,10 +135,10 @@
                             <input class="form-check-input" name="toppings" type="checkbox" value="Chicken">
                             <label class="form-check-label">Chicken</label>
                         </div> <br>
-                        <button type="submit" >Order</button>
+                        <button id="p-order" type="submit" >Make Order</button>
                     </form>
                     <div class="order">
-                        <p>You have ordered: <br> <span></span></p>
+                        <p>You have ordered: <br> <strong><span></span></strong></p>
                         <p>Would you like to:</p>
                         <button id="deliver" type="button" >Get it delivered</button> or  <button id="instore">instore pick-up</button>
                     </div>
@@ -147,7 +149,7 @@
                         </form>
                     </div>
                     <div class="delivery">
-                        <p>Your delivery to <span></span> is being processed and will cost Ksh 200</p>
+                        <p>Your delivery to <strong><span></span></strong> is being processed and will cost Ksh 200</p>
                         <button class="checkout" type="button" >Checkout</button>
                     </div>
                     <div class="pick-up">
@@ -155,7 +157,8 @@
                         <button class="checkout" type="button" >Checkout</button>
                     </div>
                 </div>
-                <div class="col-md-6">
+                   </div>
+                <div class="col-lg-6">
                     <div class="summary">
                         <h3>Order Summary</h3>
                         <table class="table">
