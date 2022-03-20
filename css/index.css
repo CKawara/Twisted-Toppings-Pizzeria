@@ -78,7 +78,7 @@ h1{
     color: #FAF3F3;
 }
 .order-red{
-    background-color: rgba(219, 35, 35, 0.64);
+    background-color: rgba(219, 35, 35, 0.639);
     padding: 7%;
 }
 .order-red button{
@@ -113,3 +113,39 @@ h1{
       margin-top: 4%;
       text-align: center;
   }
+  #contact-us{
+    background-color: black;
+    color: #FAF3F3;
+  }
+  #contact-us .input-group input{
+    background-color: transparent;
+    border: #FAF3F3 1px solid;
+    border-radius: 30px;
+    margin-left: 3%;
+  } 
+ #contact-us button{
+    color: white;
+    background-color: rgb(221, 28, 28);
+    border: #FAF3F3 1px solid;
+    border-radius: 30px;
+ }
+ #contact-us i{
+     margin-right: 3%;
+     padding-bottom: 3%;
+     color: #DD1C1C;
+ }
+ footer{
+     background-color: #252525;
+     color: #FAF3F3;
+     font-weight: 600;
+     padding: 1% 0 1% 0;
+     text-align: center;
+ }
+ footer a{
+     text-decoration: none;
+     color: #DD1C1C;
+ }
+ footer a:hover{
+    color: #fa0000;
+}
+
