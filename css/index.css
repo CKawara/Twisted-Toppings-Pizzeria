@@ -39,7 +39,7 @@ h1{
     transition: 0.5s ease;
     transform: scale(1.2);
 }
-.order, .location, .delivery, .pick-up, table{
+.order, .location, .delivery, .pick-up{
     display: none;
 }
 #about{
@@ -103,4 +103,13 @@ h1{
   }
   .form-check-input:checked{
     background-color: #FAF3F3;
+  }
+  .summary{
+      background-color: #FAF3F3;
+      margin-top: 15%;
+  }
+  .summary h3{
+      color: #DD1C1C;
+      margin-top: 4%;
+      text-align: center;
   }
