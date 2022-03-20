@@ -42,3 +42,17 @@ h1{
 .order, .location, .delivery, .pick-up, table{
     display: none;
 }
+#about{
+    background-color: #FAF3F3;
+    padding: 3% 0 3% 0;
+    font-weight: bold;
+}
+.titles{
+    text-align: center;
+    font-weight: 600;
+    font-size: xx-large;
+}
+#about p:last-child , #about p:first-child{
+    color: #DD1C1C;
+    font-size: larger;
+}
