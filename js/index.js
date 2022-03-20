@@ -34,7 +34,7 @@ Order.prototype.cost = function(){
         }else if(this.size ==="Small"){
             var toppingsPrice = checkboxes * 50;
         }
-        return sizePrice + crustPrice + toppingsPrice;
+        return (sizePrice + crustPrice + toppingsPrice)* this.amount;
     }else{
         alert("You've selected more than 4 toppings!!");
     }
@@ -45,14 +45,16 @@ $("document").ready(function(){
 
     $("#make-pizza").submit (function(event){
         event.preventDefault();
-        var size = $('select#size').val();
-        var crust = $('select#crust').val(); 
-        var toppings = [];
+        let size = $('select#size').val();
+        let crust = $('select#crust').val(); 
+        let toppings = [];
         $.each($('input[name="toppings"]:checked'),function(){
             toppings.push($(this).val());
         });
-        var amount = parseInt($('input#amount').val());
-        var pizzaOrder = new Order(size, crust, toppings, amount);
-        alert(pizzaOrder.cost() * amount);
+        let amount = parseInt($('input#amount').val());
+        let pizzaOrder = new Order(size, crust, toppings, amount);
+        let pizzaName =`${amount} ${size} ${crust} ${'crusted pizza, with'} ${toppings} ${"for the topping."}`;
+        $('.order span').text( `${pizzaName} ${"which will cost"} ${pizzaOrder.cost()}`)
+        $('.order').show();
     })
 })
