@@ -57,4 +57,9 @@ $("document").ready(function(){
         $('.order span').text( `${pizzaName} ${"which will cost"} ${pizzaOrder.cost()}`)
         $('.order').show();
     })
+    $(".order button").click(function(){
+        $('.location').show();
+        $(".order").hide();
+    })
+    
 })
