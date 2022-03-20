@@ -57,9 +57,19 @@ $("document").ready(function(){
         $('.order span').text( `${pizzaName} ${"which will cost"} ${pizzaOrder.cost()}`)
         $('.order').show();
     })
-    $(".order button").click(function(){
+    $("#deliver").click(function(){
         $('.location').show();
         $(".order").hide();
     })
-    
+    $(".location button").click(function(event){
+        event.preventDefault();
+        var location = $('.location input').val();
+        $('.delivery span').text(location);
+        $('.location').hide();
+        $('.delivery').show();
+    })
+    $("#instore").click(function(){
+        $(".pick-up").show();
+        $(".order").hide();
+    })
 })
