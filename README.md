@@ -4,6 +4,7 @@ This is a web application for a pizza place called Twisted Toppings Pizzeria, wh
 It is built using HTML CSS and javascript. It was designed using figma.
 
 ## Demo
+![home screenshot](https://github.com/CKawara/Twisted-Toppings-Pizzeria/blob/master/assets/Screenshot%20from%202022-03-21%2006-37-59.png)
 Here's the live demo https://ckawara.github.io/Twisted-Toppings-Pizzeria/
 
 ## Design
@@ -26,6 +27,9 @@ To use the site you'll need;
 - [Bootstrap](https://getbootstrap.com/) 
 - [jQuery](https://jquery.com/)
 - [Figma](https://www.figma.com/)
+
+## Known Bugs
+- Toppings selected can't be displayed
 
 ## Contributers
 [Catherine Kawara](https://github.com/CKawara/)
