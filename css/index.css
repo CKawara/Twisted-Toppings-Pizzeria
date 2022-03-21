@@ -46,11 +46,11 @@ h1{
     border-radius: 30px;
     margin-top: 7%;
 }
-#home a:hover, button:hover{
+#home a:hover, button:hover, .new-order a:hover{
     transition: 0.5s ease;
     transform: scale(1.2);
 }
-.order, .location, .delivery, .pick-up{
+.order, .location, .delivery, .pick-up ,.summary{
     display: none;
 }
 #about{
@@ -100,7 +100,7 @@ h1{
     color: #FAF3F3;
     
 }
-#p-order{
+#p-order, .new-order a{
     position: relative;
     left: 30%;
 }
@@ -158,5 +158,12 @@ h1{
  }
  footer a:hover{
     color: #fa0000;
+}
+.new-order a{
+    color: white;
+    background-color: rgb(221, 28, 28);
+    padding: 1%;
+    border-radius: 30px;
+    margin-bottom: 3%;
 }
 

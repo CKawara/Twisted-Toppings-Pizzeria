@@ -75,7 +75,24 @@ $("document").ready(function(){
             location.reload();
         }
 
-        $('.checkout').click()
+        $('.checkout').click(function(){
+            $('#p-amount').append(amount);
+            $('#p-crust').append(crust);
+            $('#p-toppings').append(toppings);
+            $('#p-size').append(size);
+            $('#p-price span').text(pizzaOrder.cost()/amount);
+            $('#cost').append(pizzaOrder.cost());
+            $('.summary').show();
+            $('.checkout').prop('disabled', true);
+        })
+        $('.delivery .checkout').click(function(){
+            $('#p-deli').append(200);
+            $('#deli-cost').append(pizzaOrder.cost() + 200)
+        })
+        $('.pick-up .checkout').click(function(){
+            $('#p-deli').append(0);
+            $('#deli-cost').append(pizzaOrder.cost() + 0)
+        })
  
 
     })
