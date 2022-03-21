@@ -8,7 +8,7 @@ It is built using HTML CSS and javascript. It was designed using figma.
 Here's the live demo https://ckawara.github.io/Twisted-Toppings-Pizzeria/
 
 ## Design
-The site was designed using figma and can be viewes [here](https://www.figma.com/file/NxKd5DggDQ5fYMI6wak7F9/Twisted-Toppings?node-id=0%3A1)
+The site was designed using figma and can be viewed [here](https://www.figma.com/file/NxKd5DggDQ5fYMI6wak7F9/Twisted-Toppings?node-id=0%3A1)
 
 ## Setup and Installation
 1. Fork the repository
