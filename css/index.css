@@ -4,6 +4,17 @@
     box-sizing: border-box;
     font-family: poppins;
 }
+.navbar{
+    padding: 20px 0 20px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+nav a{
+    font-weight: bold;
+    color: white !important;
+}
+nav a:hover{
+    color: #DD1C1C !important;
+}
 #home{
     height: 100vh;
     background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/assets/h_bg.jpg");
