@@ -25,8 +25,8 @@ Order.prototype.cost = function(){
         var crustPrice = 150;
     }
 // checkbox prices
-    var checkboxes = $('input[name="toppings"]:checked').length;
-    if(checkboxes <= 4){
+    let checkboxes = $('input[name="toppings"]:checked').length;
+    if (checkboxes<= 4){
         if(this.size === "Large"){
             var toppingsPrice = checkboxes * 150;
         }else if(this.size === "Medium"){
@@ -36,7 +36,9 @@ Order.prototype.cost = function(){
         }
         return (sizePrice + crustPrice + toppingsPrice)* this.amount;
     }else{
+        
         alert("You've selected more than 4 toppings!!");
+        
     }  
 }
 
@@ -51,7 +53,7 @@ function clearFields(){
     $('input#amount').val("");
     $('input[name="toppings"]').prop("checked", false);
 }
-
+    
 $("document").ready(function(){
 
     $("#make-pizza").submit (function(event){
@@ -63,18 +65,21 @@ $("document").ready(function(){
             toppings.push($(this).val());
         });
         var amount = parseInt($('input#amount').val());
-        var checkboxes = $('input[name="toppings"]:checked').length;
-        if(checkboxes <= 4){
+        if (toppings.length <= 4){
             var pizzaOrder = new Order(size, crust, toppings, amount);
-            $('.order span').text( `${pizzaOrder.name()} ${"which will cost"} ${pizzaOrder.cost()}`)
-            $('.order').show(); 
+        $('.order span').text( `${pizzaOrder.name()} ${"which will cost"} ${pizzaOrder.cost()}`)
+        $('.order').show(); 
+        $('#p-order').prop('disabled', true);
         }else{
-            alert("You've selected more than 4 toppings!!");
-            clearFields();
-
+            alert("You've selected more than 4 toppings!!")
+            location.reload();
         }
 
+        $('.checkout').click()
+ 
+
     })
+
     $("#deliver").click(function(){
         $('.location').show();
         $(".order").hide();
@@ -90,6 +95,11 @@ $("document").ready(function(){
         $(".pick-up").show();
         $(".order").hide();
     }) 
-    clearFields()
+    $('.new-order').click(function(){
+        location.reload();
+    })
+    
+
+    clearFields();
 })
 
