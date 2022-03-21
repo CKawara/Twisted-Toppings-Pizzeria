@@ -17,7 +17,7 @@ nav a:hover{
 }
 #home{
     height: 100vh;
-    background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/assets/h_bg.jpg");
+    background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/h_bg.jpg");
     background-size: cover;
     color: white;
     text-align: center;
@@ -63,7 +63,7 @@ h1{
     font-size: larger;
 }
 #our-pizza{
-    background: url("/assets/our_p.jpg");
+    background: url("../assets/our_p.jpg");
     background-size: cover;
     text-align: center;
     color: white;
@@ -83,7 +83,7 @@ h1{
     font-size: x-large;
 }
 #order{
-    background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/assets/pablo-pacheco-D3Mag4BKqns-unsplash.jpg");
+    background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/pablo-pacheco-D3Mag4BKqns-unsplash.jpg");
     background-size: cover;
     padding: 3% 0 5% 0;
     color: #FAF3F3;
