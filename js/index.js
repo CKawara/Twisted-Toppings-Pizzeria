@@ -44,6 +44,13 @@ Order.prototype.name =function(){
     let pizzaName =`${this.amount} ${this.size} ${this.crust} ${'crusted pizza, with'} ${this.toppings} ${"for the topping."}`;
     return pizzaName;
 }
+function clearFields(){
+    $('select#size').val("");
+    $('select#crust').val(""); 
+    $("input[type='checkbox']"). val("");
+    $('input#amount').val("");
+    $('input[name="toppings"]').prop("checked", false);
+}
 
 $("document").ready(function(){
 
@@ -56,9 +63,17 @@ $("document").ready(function(){
             toppings.push($(this).val());
         });
         var amount = parseInt($('input#amount').val());
-        var pizzaOrder = new Order(size, crust, toppings, amount);
-        $('.order span').text( `${pizzaOrder.name()} ${"which will cost"} ${pizzaOrder.cost()}`)
-        $('.order').show(); 
+        var checkboxes = $('input[name="toppings"]:checked').length;
+        if(checkboxes <= 4){
+            var pizzaOrder = new Order(size, crust, toppings, amount);
+            $('.order span').text( `${pizzaOrder.name()} ${"which will cost"} ${pizzaOrder.cost()}`)
+            $('.order').show(); 
+        }else{
+            alert("You've selected more than 4 toppings!!");
+            clearFields();
+
+        }
+
     })
     $("#deliver").click(function(){
         $('.location').show();
@@ -75,5 +90,6 @@ $("document").ready(function(){
         $(".pick-up").show();
         $(".order").hide();
     }) 
+    clearFields()
 })
 
